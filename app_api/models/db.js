@@ -8,7 +8,7 @@ var options = {
 	reconnectTries:30
 };
 
-const dbURI = 'mongodb://127.0.0.1/Diary';
+const dbURI = 'mongodb+srv://Tracey:<T00202341!>@cluster0-kmy1x.mongodb.net/test?retryWrites=true&w=majority';
 if(process.env.NODE_ENV === 'production'){
 	dbURI=process.env.MONGODB_URI;
 };
