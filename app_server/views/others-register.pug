@@ -1,0 +1,22 @@
+extends layout
+block content
+  form.reg
+  .col-md-4.col-sm-6.col-xs-8
+    .form-group
+      label(for='exampleInputName') Name
+      input#exampleInputName.form-control(type='name' aria-describedby='nameHelp' placeholder='Enter name')
+      small#emailHelp.form-text.text-muted We&apos;ll never share your name with anyone else.
+    .form-group
+      label(for='exampleInputEmail1') Email address
+      input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email')
+      small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+    .form-group
+      label(for='exampleInputPassword1') Password
+      input#exampleInputPassword1.form-control(type='password' placeholder='Password')
+    .form-group
+      label(for='exampleInputPassword1') Re-enter Password
+      input#exampleInputPassword1.form-control(type='re-enterpassword' placeholder='Re-enter Password')
+    .form-group.form-check
+      input#exampleCheck1.form-check-input(type='checkbox')
+      label.form-check-label(for='exampleCheck1') Check me out
+      button.btn.btn-primary(type='register') Register 

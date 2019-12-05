@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .row
+        .col-12.col-md-8
+        .error=message
+        app-about Loading
+        .card
+         .card-block
+
+              h1 Diary 2.0
+                 p
+                 | This application was built in 2019 to help organise your contacts personal details. Its allows you to keep personal information together in a safe and easy accessible enviroment. This page was built using Angular components
+                 h5 Enjoy!
+    block scripts
+     scripts(src='/build/main-es5.1ea28df650bada993aec.js')
+     scripts(src='/build/polyfills-es5.ef4b1e1fc703b3ff76e3.js')
+     scripts(src='/build/runtime-es5.edb2fcf2778e7bf1d426.js')

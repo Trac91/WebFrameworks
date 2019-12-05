@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+ 
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href='#') Diary2.0
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#mainSiteNav', aria-controls='#mainSiteNav', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  
+  .collapse.navbar-collapse#mainSiteNav
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='/contacts') Contacts
+      li.nav-item
+        a.nav-link(href='/contacts/list/new') Add 
+      li.nav-item
+        a.nav-link(href='/contacts/view') View
+         li.nav-item
+        a.nav-link(href='/about') About
+    ul.navbar-nav.float-right
+      li.nav-item
+        a.nav-link(href='/login') Login   
+      li.nav-item
+        a.nav-link(href='/register') Register 
+body
+    .container
+     
+     block content
+        script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+        script(src='/javascripts/bootstrap.min.js')

@@ -1,0 +1,31 @@
+extends layout
+block content
+  .row.banner
+    .col-12
+      h1=pageHeader.title
+      small Welcome to &nbsp;#{pageHeader.title}
+  .row
+    .col-12.col-lg-9
+      .row
+        .col-12.col-md-6
+         each contact in contacts
+          p.address1=contacts.address1
+          .card.card-primary
+            .card-block
+              h2.card-title Details
+              p.address1=contact.address1
+              p.address2=contact.address2
+              p.town=contact.town
+              p.eircode=contact.eircode
+              p.email=contact.email
+              p.contact=contact.contact
+        .col-12.col-md-6.location-map
+          .card.card-primary
+            .card-block
+              h2.card-title Location map
+              img.img-fluid.rounded(src='http://maps.googleapis.com/maps/api/staticmap?center=51.455041,-0.9690884&zoom=17&size=400x350&sensor=false&markers=51.455041,-0.9690884&scale=2')
+    .col-12.col-lg-3
+      p.lead
+        | Starcups is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.
+      p
+        | If you've been and you like it - or if you don't - please leave a review to help other people just like you.

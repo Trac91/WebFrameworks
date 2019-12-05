@@ -1,0 +1,37 @@
+extends layout
+block content
+ form(action="/contacts",method="post", role="form")
+  .form-row
+    .form-group.col-md-6
+      label(for='firstName') First Name
+      input#firstName.form-control(type='text' placeholder='First Name')
+    .form-group.col-md-6
+      label(for='surname') Surname
+      input#surname.form-control(type='text' placeholder='Surname')
+  .form-row
+    .form-group.col-md-6
+      label(for='email') Email
+      input#email.form-control(type='email' placeholder='Email')
+    .form-group.col-md-6
+      label(for='contact') Contact No.
+      input#contact.form-control(type='text' placeholder='Contact No.')
+  .form-group
+    label(for='address1') Address
+    input#address1.form-control(type='text' placeholder='1234 Main St')
+  .form-group
+    label(for='address2') Address 2
+    input#address2.form-control(type='text' placeholder='Apartment, studio, or floor')
+  .form-row
+    .form-group.col-md-6
+      label(for='town') Town
+      input#town.form-control(type='text')
+    .form-group.col-md-4
+      label(for='county') County
+      select#county.form-control
+        option(selected='') Choose...
+        option ...
+    .form-group.col-md-2
+      label(for='eircode') Eircode
+      input#eircode.form-control(type='text')
+  .form-group
+  button.btn.btn-light(type='submit') Add Contact

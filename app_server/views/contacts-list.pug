@@ -1,0 +1,20 @@
+extends layout 
+block content
+  .row.banner
+    .col-12
+      h1=pageHeader.title
+         small &nbsp;#{pageHeader.strapLine}
+  .row
+       .col-12.col-md-8
+       .error=message
+        each contact in contacts
+         .card
+          .card-block
+           h4
+           a(href="/contacts/${contact._id}viewContact")=contact.firstName  + contact.surname
+          p.address1=contact.address1
+          p.address2=contact.address2
+          p.email=contact.email
+          p.contact=contact.contact
+       .col-12.col-md-4
+        p.info The easy and efficent way of storing all your contact information in a safe and easy to use way. 
